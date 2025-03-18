@@ -13,8 +13,9 @@ if(Usuário: ) then (Comum) {
         :Configurar Solicitação;
     else (Ver Histórico)
         :Ver detalhes sobre solicitações;
-    }
+    
 else (Adm)
     :Atualizar Status de solicitações
+}
 @enduml
 ```
