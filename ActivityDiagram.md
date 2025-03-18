@@ -12,6 +12,10 @@ endif
 
 switch (Opções)
 case ( Fazer Solicitação )
+:Tipo de Solicitação
+:Endereço
+:Descrição
+    
 
 @enduml
 ```
