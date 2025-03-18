@@ -6,7 +6,7 @@
 if (Usuário logado?) then (Sim)
     :Permite entrada;
 else (Não)
-    :logar;
+    :Tela de Login;
 endif
     if (Opções) then (Fazer Solicitação)
         :Configurar Solicitação;
