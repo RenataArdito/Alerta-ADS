@@ -28,7 +28,7 @@ if (Usuário logado?) then (Sim)
     endif
 else (Não)
     :Fazer Login;
-    -> Abre a página de Login;
+    stop
 endif
 
 @enduml
