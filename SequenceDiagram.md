@@ -9,7 +9,7 @@ participant "Sistema" as sis
 usr -> sis: Inserir e-mail e senha
 activate sis
 
-if Credenciais válidas
+alt Credenciais válidas
         else Confirmado
             usr -> sis: Sim
             sis --> usr: Acesso concedido!
