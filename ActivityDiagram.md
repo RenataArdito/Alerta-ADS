@@ -10,9 +10,7 @@ else (Não)
 endif
 :Mostra menu principal;
 
-while (Escolher opções?) is (True)
-
-switch (Opções)
+while (Fazer Solicitação?) is (True)
 case ( Fazer Solicitação )
     switch (Funcionalidade selecionada)
     case (Configura Solicitação)
