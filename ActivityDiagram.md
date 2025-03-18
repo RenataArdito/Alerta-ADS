@@ -1,3 +1,4 @@
+```plantuml
 @startuml
 
 start
@@ -31,3 +32,4 @@ else (Não)
 endif
 
 @enduml
+```
