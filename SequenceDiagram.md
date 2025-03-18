@@ -56,3 +56,29 @@ deactivate sis
 
 @enduml
 ```
+```plantuml
+@startuml
+
+title Consultar Relatos
+
+actor "Usuário" as usr
+actor "Administrador" as adm
+participant "Sistema" as sis
+
+usr -> sis: Acessar lista de relatos
+adm -> sis: Acessar lista de relatos
+activate sis
+
+sis --> usr: Exibir relatos conforme filtros aplicados
+sis --> adm: Exibir relatos conforme filtros aplicados
+
+usr -> sis: Visualizar detalhes de um relato
+adm -> sis: Visualizar detalhes de um relato
+
+sis --> usr: Exibir detalhes do relato
+sis --> adm: Exibir detalhes do relato
+
+deactivate sis
+
+@enduml
+```
