@@ -51,8 +51,7 @@ participant "Sistema" as sis
 admin -> sis: Selecionar relato e definir status
 activate sis
 
-sis --> admin: Relato atualizado!
-sis --> admin: Notificação enviada ao usuário!
+sis --> admin: Status atualizado!
 deactivate sis
 
 @enduml
