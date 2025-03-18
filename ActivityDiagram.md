@@ -16,8 +16,8 @@ switch (Opções)
 case ( Fazer Solicitação )
     switch (Funcionalidade selecionada)
     case (Configura Solicitação)
-        :Solicitação Enviada
-        case(Solicitação avaliada por Adm)
+        :Solicitação Enviada;
+        switch(Solicitação avaliada por Adm)
     endswitch
 endswitch
 
