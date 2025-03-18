@@ -23,17 +23,9 @@ case ( Fazer Solicitação )
         :Detalhes da solicitação;
     endswitch
 case ( Visualizar Histórico ) 
-    switch (Histórico)
+    switc(Histórico)
     case (Ver Status do Histórico)
     case (Ver Detalhes do Histórico)
-case ( Ver Detalhes do Histórico )
-    switch (Card selecionado)
-    case (Entretenimento)
-        :Confere dicas de atividades;
-    case (Locais Pet-friendly)
-        :Confere locais de entretenimento;
-    case (Adestramento)
-        :Confere dicas de adestramento;
     endswitch
 endswitch
 
