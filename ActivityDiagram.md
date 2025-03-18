@@ -10,9 +10,9 @@ else (Não)
 endif
 :Mostra menu principal;
 
-switch (Ambiente selecionado)
-case ( Cadastro Pet )
-    switch (Funcionalidade selecionada)
+switch (Opções)
+case ( Fazer Solicitação )
+
     case (Cadastrar Pet)
         :Adiciona dados do Pet;
     case (Atualizar dados)
