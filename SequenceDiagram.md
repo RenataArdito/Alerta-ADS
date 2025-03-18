@@ -72,7 +72,6 @@ sis --> usr: Exibir relatos conforme filtros aplicados
 usr -> sis: Visualizar detalhes de um relato
 
 sis --> usr: Exibir detalhes do relato
-sis --> adm: Exibir detalhes do relato
 
 deactivate sis
 
