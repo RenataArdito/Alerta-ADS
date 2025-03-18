@@ -24,7 +24,6 @@ case ( Fazer Solicitação )
     endswitch
 case ( Visualizar Histórico ) 
     switch(Histórico)
-        case (Ver Status do Histórico)
         case (Ver Detalhes do Histórico)
     endswitch
 endswitch
