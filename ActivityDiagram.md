@@ -17,6 +17,10 @@ endif
 
 ```plantuml
 @startuml
-:Adm;
+:Adm - Abre o app;
+if (Opções) then (Avaliar Solicitações)
+        :Avaliar Solicitação;
+    else (Ver Histórico)
+        :Ver Histórico de Avaliações;
 @enduml
 ```
