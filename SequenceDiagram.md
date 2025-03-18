@@ -1,8 +1,8 @@
 ```plantuml
 @startuml
-title Login
+title Login 
 
-actor "Usuário" as usr
+actor "Usuário/Adm" as usr
 participant "Sistema" as sis
 
 usr -> sis: Inserir e-mail e senha
@@ -27,7 +27,7 @@ title Realizar solicitação
 actor "Usuário" as usr
 participant "Sistema" as sis
 
-usr -> sis: Inserir descrição, localização e anexos
+usr -> sis: Inserir clategoria, descrição, localização.
 sis --> usr: Solicitação registrada com sucesso!
 
 
@@ -42,7 +42,7 @@ title Classificar Solicitação
 actor "Administrador" as admin
 participant "Sistema" as sis
 
-admin -> sis: Selecionar relato e definir status
+admin -> sis: seleciona relato, define e detalha status
 activate sis
 
 sis --> admin: Status atualizado!
