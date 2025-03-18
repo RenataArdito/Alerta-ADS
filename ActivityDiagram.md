@@ -11,7 +11,8 @@ endif
 :Mostra menu principal;
 
 switch (Opções)
-:Fazer Solicitações;
+case ( Configurar Solicitação )
+
 
 
 
