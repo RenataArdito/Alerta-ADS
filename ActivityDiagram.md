@@ -15,7 +15,7 @@ while (Escolher opções?) is (True)
 switch (Opções)
 case ( Fazer Solicitação )
     switch (Funcionalidade selecionada)
-    case (Tipo de Solicitação / Adicionar Endereço / Adicionar Descrição)
+    case (Configura Solicitação)
         :Escolhe tipo de solicitação;
     endswitch
 endswitch
