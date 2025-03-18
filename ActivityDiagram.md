@@ -5,10 +5,10 @@
 
 if (Usuário logado?) then (Sim)
     :Permite entrada;
-else (Não)
-    :logar;
 elif(Adiministrador)
     :Permite a entrada;
+else (Não)
+    :logar;
 endif
 :Mostra menu principal;
 
