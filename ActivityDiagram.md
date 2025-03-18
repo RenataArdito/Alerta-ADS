@@ -26,7 +26,7 @@ case ( Visualizar Histórico )
     switch (Histórico)
     case (Ver Status do Histórico)
     case (Ver Detalhes do Histórico)
-case ( Entretenimento e Adestramento )
+case ( Ver Detalhes do Histórico )
     switch (Card selecionado)
     case (Entretenimento)
         :Confere dicas de atividades;
