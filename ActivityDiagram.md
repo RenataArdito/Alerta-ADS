@@ -11,6 +11,7 @@ endif
 :Mostra menu principal;
 
 while (Fazer Solicitação?) is (True)
+switch()
 case ( Fazer Solicitação )
     switch (Funcionalidade selecionada)
     case (Configura Solicitação)
