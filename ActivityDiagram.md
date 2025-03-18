@@ -22,23 +22,10 @@ case ( Fazer Solicitação )
     case (Adicionar descrição)
         :Detalhes da solicitação;
     endswitch
-case ( Pet Care ) 
-    switch (Seção selecionada)
-    case (Área de Alimentação)
-        switch (Card selecionado)
-        case (Dicas)
-            :Lê dicas\nde alimentação;
-        case (Rotina)
-            :Insere informações\nrelacionadas\nà alimentação;
-        endswitch
-    case (Área de Saúde)
-        switch (Card selecionado)
-        case (Medicamentos)
-            :Confere medicações\na serem administradas;
-        case (Área Vet)
-            :Verifica informações\nde consultas e exames;
-        endswitch
-    endswitch
+case ( Visualizar Histórico ) 
+    switch (Histórico)
+    case (Ver Status do Histórico)
+    case (Ver Detalhes do Histórico)
 case ( Entretenimento e Adestramento )
     switch (Card selecionado)
     case (Entretenimento)
