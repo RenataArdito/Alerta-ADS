@@ -10,7 +10,7 @@ else (Não)
 endif
 :Mostra menu principal;
 
-while (Sair do app?) is (Não)
+while (Escolher opções?) is (True)
 
 switch (Opções)
 case ( Fazer Solicitação )
