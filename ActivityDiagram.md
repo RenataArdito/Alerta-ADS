@@ -23,7 +23,7 @@ case ( Fazer Solicitação )
         :Detalhes da solicitação;
     endswitch
 case ( Visualizar Histórico ) 
-    switc(Histórico)
+    switch(Histórico)
     case (Ver Status do Histórico)
     case (Ver Detalhes do Histórico)
     endswitch
