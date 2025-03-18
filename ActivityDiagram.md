@@ -1,6 +1,7 @@
-```plantuml
 @startuml
+
 start
+
 :Abre a página web;
 :Abre a página de Login;
 
@@ -25,8 +26,8 @@ if (Usuário logado?) then (Sim)
         endif
     endif
 else (Não)
+    :Fazer Login;
     back to :Abre a página de Login;
 endif
 
 @enduml
-```
