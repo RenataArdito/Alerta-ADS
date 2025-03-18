@@ -28,11 +28,8 @@ actor "Usuário" as usr
 participant "Sistema" as sis
 
 usr -> sis: Inserir descrição, localização e anexos
-activate sis
-
 sis --> usr: Solicitação registrada com sucesso!
-deactivate sis
-end
+
 
 @enduml
 ```
