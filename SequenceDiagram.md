@@ -9,17 +9,13 @@ participant "Sistema" as sis
 usr -> sis: Inserir e-mail e senha
 activate sis
 
-alt Credenciais inválidas
-    sis --> usr: Acesso negado!
-else Credenciais válidas
-    sis --> usr: Deseja confirmar login?
-        alt Não confirmado
-            usr -> sis: Não
-            sis --> usr: Login cancelado!
+if Credenciais válidas
         else Confirmado
             usr -> sis: Sim
             sis --> usr: Acesso concedido!
             deactivate sis
+else Credenciais inválidas
+    sis --> usr: Acesso negado!
     end
 end
 
