@@ -12,8 +12,8 @@ endif
         :Configurar Solicitação;
     else (Ver Histórico)
         :Ver detalhes sobre solicitações;
-
+@enduml
+@startuml
 :Adm;
-
 @enduml
 ```
