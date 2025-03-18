@@ -16,7 +16,7 @@ switch (Opções)
 case ( Fazer Solicitação )
     switch (Funcionalidade selecionada)
     case (Configura Solicitação)
-        :Escolhe tipo de solicitação;
+        :Solicitação Enviada;
     endswitch
 endswitch
 
