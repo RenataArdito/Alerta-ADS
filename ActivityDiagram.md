@@ -28,8 +28,8 @@ if (Usuário logado?) then (Sim)
     endif
 else (Não)
     :Fazer Login;
-    stop
+    -> (Usuário logado?);
 endif
-
 @enduml
+
 ```
