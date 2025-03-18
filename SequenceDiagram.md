@@ -27,7 +27,7 @@ title Realizar solicitação
 actor "Usuário" as usr
 participant "Sistema" as sis
 
-usr -> sis: Inserir clategoria, descrição, localização.
+usr -> sis: Inserir categoria, descrição, localização.
 sis --> usr: Solicitação registrada com sucesso!
 
 
