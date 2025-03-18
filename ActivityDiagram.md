@@ -23,8 +23,8 @@ case ( Fazer Solicitação )
         :Detalhes da solicitação;
     endswitch
 case ( Visualizar Histórico ) 
-    switch(Histórico)
-    case (Ver Detalhes do Histórico)
+    switch(Ver Detalhes do Histórico)
+
 
 @enduml
 ```
