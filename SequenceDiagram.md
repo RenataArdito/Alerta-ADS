@@ -1,6 +1,5 @@
 ```plantuml
 @startuml
-!theme black
 
 title Login
 
