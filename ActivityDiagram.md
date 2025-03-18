@@ -12,7 +12,7 @@ endif
 
 switch (Opções)
 case ( Fazer Solicitação )
-:Tipo de Solicitação
+:Tipo de Solicitação;
 
     
 
