@@ -8,10 +8,7 @@ if (Usuário logado?) then (Sim)
 else (Não)
     :logar;
 endif
-:Permite entrada;
 :Mostra menu principal;
-
-while (Sair do app?) is (Não)
 
 switch (Ambiente selecionado)
 case ( Cadastro Pet )
@@ -51,7 +48,5 @@ case ( Entretenimento e Adestramento )
     endswitch
 endswitch
 
-endwhile (Sim)
-stop
 @enduml
 ```
