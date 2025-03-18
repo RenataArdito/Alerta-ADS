@@ -13,7 +13,7 @@ endif
 switch (Opções)
 case ( Fazer Solicitação )
     switch( Escolher tipo de solicitação)
-
+case ( Ver histórico )
 
 
     
