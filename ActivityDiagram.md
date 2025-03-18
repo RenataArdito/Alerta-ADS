@@ -7,6 +7,8 @@ if (Usuário logado?) then (Sim)
     :Permite entrada;
 else (Não)
     :logar;
+elif(Adiministrador)
+    :Permite a entrada;
 endif
 :Mostra menu principal;
 
