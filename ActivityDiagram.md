@@ -5,17 +5,15 @@
 
 if (Usuário logado?) then (Sim)
     :Permite entrada;
-if(Adiministrador)
-    :Permite a entrada;
 else (Não)
     :logar;
 endif
-:Mostra menu principal;
-
-if (Opções) then (Fazer Solicitação)
-    :Configurar Solicitação;
-else (Ver Histórico)
-    :Ver detalhes sobre solicitações;
-
+if(Usuário: ) then (Comum)
+    if (Opções) then (Fazer Solicitação)
+        :Configurar Solicitação;
+    else (Ver Histórico)
+        :Ver detalhes sobre solicitações;
+else (Adm)
+    :Atualizar Status de solicitações
 @enduml
 ```
