@@ -5,7 +5,7 @@
 
 if (Usuário logado?) then (Sim)
     :Permite entrada;
-elif(Adiministrador)
+if(Adiministrador)
     :Permite a entrada;
 else (Não)
     :logar;
