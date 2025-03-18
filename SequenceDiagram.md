@@ -31,7 +31,7 @@ usr -> sis: Inserir descrição, localização e anexos
 activate sis
 
 sis --> usr: Solicitação registrada com sucesso!
-    deactivate sis
+deactivate sis
 end
 
 @enduml
