@@ -67,7 +67,7 @@ participant "Sistema" as sis
 usr -> sis: Acessar lista de relatos
 activate sis
 
-sis --> usr: Exibir relatos conforme filtros aplicados
+sis --> usr: Exibir relatos 
 
 usr -> sis: Visualizar detalhes de um relato
 
