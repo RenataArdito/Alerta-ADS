@@ -13,6 +13,9 @@ endif
     else (Ver Histórico)
         :Ver detalhes sobre solicitações;
 @enduml
+```
+
+```plantuml
 @startuml
 :Adm;
 @enduml
