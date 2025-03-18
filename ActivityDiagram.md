@@ -25,12 +25,6 @@ case ( Fazer Solicitação )
 case ( Visualizar Histórico ) 
     switch(Histórico)
     case (Ver Detalhes do Histórico)
-    endswitch
-endswitch
-
-
-
-    
 
 @enduml
 ```
