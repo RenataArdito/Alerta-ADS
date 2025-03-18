@@ -1,6 +1,6 @@
 ```plantuml
 @startuml
-
+start
 :Abre a página web;
 :Abre a página de Login;
 
