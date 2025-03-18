@@ -39,3 +39,21 @@ end
 
 @enduml
 ```
+
+```plantuml
+@startuml
+
+title Classificar Relato
+
+actor "Administrador" as admin
+participant "Sistema" as sis
+
+admin -> sis: Selecionar relato e definir status
+activate sis
+
+sis --> admin: Relato atualizado!
+sis --> admin: Notificação enviada ao usuário!
+deactivate sis
+
+@enduml
+```
