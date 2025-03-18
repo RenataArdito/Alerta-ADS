@@ -22,7 +22,7 @@ end
 ```plantuml
 @startuml
 
-title Relatar Problema
+title Realizar solicitação
 
 actor "Usuário" as usr
 participant "Sistema" as sis
@@ -30,11 +30,8 @@ participant "Sistema" as sis
 usr -> sis: Inserir descrição, localização e anexos
 activate sis
 
-alt Dados válidos
-    sis --> usr: Relato registrado com sucesso!
+sis --> usr: Solicitação registrada com sucesso!
     deactivate sis
-else Dados inválidos
-    sis --> usr: Relato inválido!
 end
 
 @enduml
@@ -43,7 +40,7 @@ end
 ```plantuml
 @startuml
 
-title Classificar Relato
+title Classificar Solicitação
 
 actor "Administrador" as admin
 participant "Sistema" as sis
@@ -59,19 +56,19 @@ deactivate sis
 ```plantuml
 @startuml
 
-title Consultar Relatos
+title Consultar Solicitações
 
 actor "Usuário/Adm" as usr
 participant "Sistema" as sis
 
-usr -> sis: Acessar lista de relatos
+usr -> sis: Acessar lista de solicitações
 activate sis
 
-sis --> usr: Exibir relatos 
+sis --> usr: Exibir solicitações 
 
-usr -> sis: Visualizar detalhes de um relato
+usr -> sis: Visualizar detalhes de uma solicitação
 
-sis --> usr: Exibir detalhes do relato
+sis --> usr: Exibir detalhes da solicitação
 
 deactivate sis
 
