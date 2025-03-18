@@ -7,10 +7,8 @@ if (Usuário logado?) then (Sim)
     :Permite entrada;
 else (Não)
     :logar;
-    endif
-    :Permite entrada;
 endif
-
+:Permite entrada;
 :Mostra menu principal;
 
 while (Sair do app?) is (Não)
