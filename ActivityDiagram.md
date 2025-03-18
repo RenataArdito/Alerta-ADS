@@ -10,15 +10,10 @@ else (Não)
 endif
 :Mostra menu principal;
 
-while (Fazer Solicitação?) is (True)
-switch()
-case ( Fazer Solicitação )
-    switch (Funcionalidade selecionada)
-    case (Configura Solicitação)
-        :Solicitação Enviada;
-    endswitch
-endswitch
-
+if (Opções) then (Fazer Solicitação)
+    :Configurar Solicitação;
+else (Ver Histórico)
+    :Ver detalhes sobre solicitações;
 
 @enduml
 ```
