@@ -21,18 +21,43 @@ endif
 
 while (Sair do app?) is (Não)
 
-switch (menu)
-case ( Fazer Solicitação )
-    switch (Fazer )
-    case (Tipo de Relato)
-        :Buraco na Rua / Iluminação pública defeituosa / Descarte irregular / Vazamento de água / etc;
-    case ( Fazer Solicitação )
+switch (Ambiente selecionado)
+case ( Cadastro Pet )
+    switch (Funcionalidade selecionada)
+    case (Cadastrar Pet)
+        :Adiciona dados do Pet;
+    case (Atualizar dados)
+        :Atualiza dados do Pet;
+    case (Remover)
+        :Exclui Pet;
     endswitch
-
-case ( Consultar Histórico ) 
+case ( Pet Care ) 
     switch (Seção selecionada)
-    case(Visualizar Histórico de solicitações)
+    case (Área de Alimentação)
+        switch (Card selecionado)
+        case (Dicas)
+            :Lê dicas\nde alimentação;
+        case (Rotina)
+            :Insere informações\nrelacionadas\nà alimentação;
+        endswitch
+    case (Área de Saúde)
+        switch (Card selecionado)
+        case (Medicamentos)
+            :Confere medicações\na serem administradas;
+        case (Área Vet)
+            :Verifica informações\nde consultas e exames;
+        endswitch
     endswitch
+case ( Entretenimento e Adestramento )
+    switch (Card selecionado)
+    case (Entretenimento)
+        :Confere dicas de atividades;
+    case (Locais Pet-friendly)
+        :Confere locais de entretenimento;
+    case (Adestramento)
+        :Confere dicas de adestramento;
+    endswitch
+endswitch
 
 endwhile (Sim)
 stop
