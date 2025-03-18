@@ -13,5 +13,7 @@ endif
     else (Ver Histórico)
         :Ver detalhes sobre solicitações;
 
+:Adm;
+
 @enduml
 ```
