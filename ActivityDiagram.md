@@ -6,13 +6,7 @@
 if (Usuário logado?) then (Sim)
     :Permite entrada;
 else (Não)
-    if (Já possui uma conta no app?) then (Sim)
-        :Insere credenciais;
-        while (Credenciais válidas?) is (Não)
-              :Solicita reinserção dos dados;
-        endwhile (Sim)
-    else (Não)
-        :Cria uma conta;
+    :logar;
     endif
     :Permite entrada;
 endif
