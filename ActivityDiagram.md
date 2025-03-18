@@ -1,26 +1,32 @@
 ```plantuml
 @startuml
 
-:Abre o aplicativo;
+:Abre a página web;
+:Abre a página de Login;
 
 if (Usuário logado?) then (Sim)
-    :Permite entrada;
+    if (É administrador?) then (Sim)
+        if (Opções) then (Avaliar Solicitações)
+            :Visualiza solicitações pendentes;
+            :Atualiza status e acrescenta descrição de status;
+            stop
+        else (Ver Histórico)
+            :Ver Histórico de Avaliações;
+            stop
+        endif
+    else (Não - Usuário Comum)
+        if (Opções) then (Fazer Solicitação)
+            :Preencher Solicitação;
+            :Visualizar solicitações enviadas;
+            stop
+        else (Ver Histórico)
+            :Visualizar solicitações enviadas;
+            stop
+        endif
+    endif
 else (Não)
-    :Tela de Login;
+    :Fazer Login;
 endif
-    if (Opções) then (Fazer Solicitação)
-        :Configurar Solicitação;
-    else (Ver Histórico)
-        :Ver detalhes sobre solicitações;
-@enduml
-```
 
-```plantuml
-@startuml
-:Adm - Abre o app;
-if (Opções) then (Avaliar Solicitações)
-        :Avaliar Solicitação;
-    else (Ver Histórico)
-        :Ver Histórico de Avaliações;
 @enduml
 ```
