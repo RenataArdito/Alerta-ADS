@@ -16,12 +16,11 @@ actor "Usuário" as a001
 actor "Administrador" as a002
 
 UC002 .> UC001: <<extends>>
+UC003 .> UC004: <<extends>>
 a001 -- UC001
 a001 -- UC002
-UC003 .> UC004: <<extends>>
 a002 -- UC001
 a002 -- UC003
-
 UC004 -- a001
 UC004 -- a002
 
