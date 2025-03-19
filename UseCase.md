@@ -17,7 +17,7 @@ actor "Administrador" as a002
 
 UC002 .> UC001: <<extends>>
 a001 -- UC001
-
+a001 -- UC002
 UC003 .> UC004: <<extends>>
 a002 -- UC003
 
