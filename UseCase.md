@@ -46,6 +46,6 @@ UC004 -- a002
 
 | Secretária      | Sistema      |
 | ------------- | ------------- |
-| | 2. Usuário não autenticado. Executar UC006 Autenticação de Usuário e retornar ao passo 2..|
-
+| | 2. Usuário não autenticado. Solicitar criação do novo usuário|
+ 
 
