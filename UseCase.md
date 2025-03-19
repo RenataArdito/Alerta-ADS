@@ -8,23 +8,21 @@ rectangle "Sistema de Relatos de Problemas Urbanos"{
 
 usecase "Fazer Login" as UC001
 usecase "Relatar Problema" as UC002
-usecase "Atualizar Relato" as UC003
-usecase "Classificar Relato" as UC004
-usecase "Consultar Relatos" as UC005
+usecase "Classificar Relato" as UC003
+usecase "Consultar Relatos" as UC004
 }
 
 actor "Usuário" as a001
 actor "Administrador" as a002
 
 UC002 .> UC001: <<extends>>
-UC003 .> UC002: <<extends>>
 a001 -- UC001
 
-UC004 .> UC005: <<extends>>
-a002 -- UC004
+UC003 .> UC004: <<extends>>
+a002 -- UC003
 
-UC005 -- a001
-UC005 -- a002
+UC004 -- a001
+UC004 -- a002
 
 @enduml
 ```
