@@ -12,7 +12,7 @@ class Usuario {
    + cadastrarUsuario() : void
 }
 
-class Relato {
+class Problema {
    - descricao : String
    - localizacao : String
    - status : String
