@@ -21,7 +21,7 @@ class Problema {
    + cadastrarProblema() : void
 }
 
-Usuario "1" -- "*" Relato
+Usuario "1" -- "*" Problema
 
 @enduml
 ```
