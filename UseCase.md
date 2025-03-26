@@ -26,6 +26,13 @@ UC004 -- a002
 @enduml
 ```
 
+### 1o Caso de uso
+| Caso de Uso      | Login no Sistema |
+| ------------- | ------------- |
+| Ator principal | Usuário |
+| Resumo | O usuário acessa a plataforma inserindo suas credenciais para autenticação. |
+| Pré-condições | O usuário deve possuir um cadastro prévio no sistema. |
+| Pós-condições | O usuário é autenticado e pode acessar as funcionalidades do sistema. |
 
 ### Fluxo principal
 
@@ -36,13 +43,6 @@ UC004 -- a002
 | 3. Confirma a tentativa de login. | |
 |  | 4. Concede acesso e redireciona para a página inicial. |
 
-### 1o Caso de uso
-| Caso de Uso      | Login no Sistema |
-| ------------- | ------------- |
-| Ator principal | Usuário |
-| Resumo | O usuário acessa a plataforma inserindo suas credenciais para autenticação. |
-| Pré-condições | O usuário deve possuir um cadastro prévio no sistema. |
-| Pós-condições | O usuário é autenticado e pode acessar as funcionalidades do sistema. |
 
 ### Fluxo alternativo CA 1 - Credenciais inválidas
 
