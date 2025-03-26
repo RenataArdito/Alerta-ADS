@@ -78,7 +78,7 @@ UC004 -- a002
 
 ### Fluxo alternativo CA 1 - Usuário não autenticado
 
-| Secretária      | Sistema      |
+| Usuário     | Sistema      |
 | ------------- | ------------- |
 | | 2. Usuário não autenticado. Solicitar criação do novo usuário|
 
