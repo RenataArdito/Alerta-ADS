@@ -1,5 +1,4 @@
-```
-plantuml
+```plantuml
 @startuml
 
 class Usuario {
