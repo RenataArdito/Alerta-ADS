@@ -1,3 +1,5 @@
+```
+plantuml
 @startuml
 
 class Usuario {
@@ -23,3 +25,4 @@ class Relato {
 Usuario "1" -- "*" Relato
 
 @enduml
+```
