@@ -22,7 +22,7 @@ end
 ```plantuml
 @startuml
 
-title Realizar solicitação
+title Relatar Problema
 
 actor "Usuário" as usr
 participant "Sistema" as sis
