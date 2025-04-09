@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLICITAÇÃO</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+    <div><a href="/Home">Home</a></div>
+    <div><a href="/Historico">Histórico</a></div>
+    <div class="logo">Logo</div>
+    <div><a href="/Login">LOGIN</a></div>
+</header>
+<h2>SOLICITAÇÃO</h2>
+<div class="form-container">
+<form action="/solicitacao" method="post">
+    <label>Categoria:</label>
+    <select name="categoria">
+        <option value="buracos">Buracos nas Ruas</option>
+        <option value="iluminacao">Iluminação Pública Defeituosa</option>
+        <option value="descarte">Descarte Irregular de Lixo</option>
+        <option value="vazamento">Vazamento de Água</option>
+        <option value="Outro">Outro</option>
+    </select>
+    <label>Endereço:</label>
+    <input type="text" name="endereco" required>
+    <label>Descrição:</label>
+    <textarea name="descricao" required></textarea>
+    <button type="submit">Enviar</button>
+</form>
+</div>
+</body>
+</html>
