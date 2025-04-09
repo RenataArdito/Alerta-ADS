@@ -29,17 +29,26 @@ header {
     padding-top: 25px;
 }
 
+.logo-placeholder,
+.login-placeholder {
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.login-placeholder {
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
 a {
     color: white;
     text-decoration: none;
-}
-
-.logo img {
-    height: 40px;
-}
-
-.login img {
-    height: 30px;
+    font-weight: bold;
 }
 
 h2 {
@@ -71,7 +80,9 @@ form {
     margin-top: 20px;
 }
 
-select, input, textarea {
+select,
+input,
+textarea {
     width: 700px;
     padding: 10px;
     border-radius: 5px;
@@ -102,12 +113,108 @@ button:hover {
     display: flex;
     justify-content: space-around;
     padding: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.solicitacao, .historico {
+.solicitacao,
+.historico,
+.card {
     background: #000;
     color: white;
     padding: 20px;
     border-radius: 10px;
     width: 40%;
+    min-height: 250px;
 }
+
+.status-finalizado {
+    color: limegreen;
+}
+.status-andamento {
+    color: dodgerblue;
+}
+.status-negado {
+    color: red;
+}
+.status-avaliacao {
+    color: gold;
+}
+
+.card {
+    width: 300px;
+    text-align: left;
+}
+
+.card p,
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.icon-placeholder {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+.login-box,
+.register-box {
+    background: #000;
+    color: #fff;
+    width: 500px;
+    margin: 20px auto;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.login-box input,
+.register-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.update-container {
+    background: #000;
+    color: #fff;
+    width: 800px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.update-container textarea {
+    height: 150px;
+}
+
+@media (max-width: 768px) {
+    .form-container,
+    .login-box,
+    .register-box,
+    .update-container {
+        width: 95%;
+    }
+
+    select,
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    .card {
+        width: 90%;
+    }
+  }  

@@ -1,37 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <title>LOGIN</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header>
-        <div name="Home">
-            <a href="/home">Home</a>
-        </div>
-        <div name="Solicitacao">
-            <a href="/solicitação">Solicitação</a>
-        </div>
-        <div name="Historico">
-            <a href="/historico">Histórico</a>
-        </div>
-        <div name="logo"></div>
-        <div name="Login">
-            <a href="/login">img</a>
-        </div>
-        <h2>LOGIN</h2>
-        <form action="/login" method="post">
-            <label>E-mail:</label>
-            <input type="text" name="usuario" required>
-            <label>Senha:</label>
-            <input type="password" name="senha" required>
-            <button type="submit">Entrar</button>
-            <div name="sair">
-                <a href="/home">Sair</a>
-            </div>
-        </form>
-    </header>
+  <header>
+    <nav class="nav-links">
+      <a href="/home" class="nav-link">Home</a>
+      <a href="/solicitacao" class="nav-link">Solicitação</a>
+      <a href="/historico" class="nav-link">Histórico</a>
+    </nav>
+    <div class="logo">logo</div>
+    <div class="user-icon">icon</div>
+  </header>
+
+  <h2>LOGIN</h2>
+
+  <div class="form-container">
+    <form action="/login" method="post">
+      <input type="email" name="usuario" placeholder="E-mail" required>
+      <input type="password" name="senha" placeholder="Senha" required>
+      <button type="submit">ENTRAR</button>
+    </form>
+  </div>
 </body>
 </html>

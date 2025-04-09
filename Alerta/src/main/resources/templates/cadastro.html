@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a href="/home" class="nav-link">Home</a>
+    <a href="/login" class="nav-link">Login</a>
+  </header>
+
+  <h2>CADASTRO</h2>
+
+  <div class="form-container">
+    <form action="/cadastro" method="post">
+      <input type="text" name="nome" placeholder="Nome completo" required>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <input type="text" name="endereco" placeholder="Endereço" required>
+      <input type="date" name="nascimento" placeholder="Data de nascimento" required>
+      <input type="password" name="senha" placeholder="Senha" required>
+      <button type="submit">ENVIAR</button>
+    </form>
+  </div>
+</body>
+</html>

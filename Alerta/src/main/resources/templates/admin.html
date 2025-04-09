@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a href="/home" class="nav-link">Home</a>
+    <a href="/logout" class="nav-link">Logout</a>
+  </header>
+
+  <h2>ATUALIZAÇÃO DE PROCESSOS</h2>
+
+  <div class="form-container">
+    <form action="/admin/update" method="post">
+      <select name="solicitacao">
+        <option value="">Escolha a Solicitação</option>
+        <!-- valores dinâmicos -->
+      </select>
+      <input type="text" name="status" placeholder="Status" required>
+      <textarea name="detalhes" placeholder="Detalhes"></textarea>
+      <button type="submit">Atualizar</button>
+    </form>
+  </div>
+</body>
+</html>

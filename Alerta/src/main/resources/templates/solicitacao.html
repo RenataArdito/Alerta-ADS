@@ -7,29 +7,36 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header>
-    <div><a href="/home">Home</a></div>
-    <div><a href="/historico">Histórico</a></div>
-    <div class="logo">Logo</div>
-    <div><a href="/login">LOGIN</a></div>
-</header>
-<h2>SOLICITAÇÃO</h2>
-<div class="form-container">
-<form action="/solicitacao" method="post">
-    <label>Categoria:</label>
-    <select name="categoria">
-        <option value="buracos">Buracos nas Ruas</option>
-        <option value="iluminacao">Iluminação Pública Defeituosa</option>
-        <option value="descarte">Descarte Irregular de Lixo</option>
-        <option value="vazamento">Vazamento de Água</option>
-        <option value="Outro">Outro</option>
-    </select>
-    <label>Endereço:</label>
-    <input type="text" name="endereco" required>
-    <label>Descrição:</label>
-    <textarea name="descricao" required></textarea>
-    <button type="submit">Enviar</button>
-</form>
-</div>
+    <header>
+        <div class="header-links">
+            <div><a href="/solicitacao">Solicitação</a></div>
+            <div><a href="/Historico">Histórico</a></div>
+            <div><a href="/cadastro">Cadastro</a></div>
+            <div><a href="/admin">Admin</a></div>
+            <div><a href="/login">Login Teste</a></div>
+        </div>
+        <div name="logo"></div>
+        <div name="Login">
+            <a href="/login">Login</a>
+        </div>
+    </header>
+
+    <h2>SOLICITAÇÃO</h2>
+    <div class="form-container">
+        <form id="solicitacao-form">
+            <select id="categoria" name="categoria" required>
+                <option value="" selected disabled>Categoria</option>
+                <option value="buracos">Buracos nas Ruas</option>
+                <option value="iluminacao">Iluminação Pública Defeituosa</option>
+                <option value="descarte">Descarte Irregular de Lixo</option>
+                <option value="vazamento">Vazamento de Água</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <input type="text" id="endereco" name="endereco" placeholder="Endereço" required>
+            <textarea id="descricao" name="descricao" placeholder="Descrição" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>
