@@ -15,7 +15,7 @@ public class HistoricoController {
     @Autowired
     private HistoricoService historicoService;
 
-    @GetMapping("/historico")
+    @GetMapping("/Historico")
     public String historico(Model model) {
         List<Historico> historicos = historicoService.listarHistorico();
         model.addAttribute("historicos", historicos);
