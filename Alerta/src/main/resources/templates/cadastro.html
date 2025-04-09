@@ -8,26 +8,26 @@
 <body>
   <header>
     <div class="header-links">
+        <div><a href="/home">Home</a></div>
         <div><a href="/solicitacao">Solicitação</a></div>
         <div><a href="/Historico">Histórico</a></div>
         <div><a href="/cadastro">Cadastro</a></div>
         <div><a href="/admin">Admin</a></div>
-        <div><a href="/login">Login Teste</a></div>
     </div>
     <div class="logo">logo</div>
-    <div class="user-icon">icon</div>
+    <div class="user-icon"><a href="/login">Login</a></div>
   </header>
 
   <h2>CADASTRO</h2>
 
   <div class="form-container">
-    <form action="/cadastro" method="post">
-      <input type="text" name="nome" placeholder="Nome completo" required>
-      <input type="email" name="email" placeholder="E-mail" required>
-      <input type="text" name="endereco" placeholder="Endereço" required>
-      <input type="date" name="nascimento" placeholder="Data de nascimento" required>
-      <input type="password" name="senha" placeholder="Senha" required>
-      <button type="submit">ENVIAR</button>
+    <form action="#" th:action="@{/cadastro}" th:object="${usuario}" method="post">
+        <input type="text" th:field="*{nome}" placeholder="Nome completo" required>
+        <input type="email" th:field="*{email}" placeholder="E-mail" required>
+        <input type="text" th:field="*{endereco}" placeholder="Endereço" required>
+        <input type="date" th:field="*{nascimento}" placeholder="Data de nascimento" required>
+        <input type="password" th:field="*{senha}" placeholder="Senha" required>
+        <button type="submit">ENVIAR</button>
     </form>
   </div>
 </body>
