@@ -15,8 +15,8 @@ public class AdminController {
 
     @GetMapping("/admin")
     public String paginaAdmin(HttpSession session) {
-        Usuario usuario = (Usuario) session.getAttribute("usuario");
-        if (usuario != null && usuario.isRole()) { // true = admin
+        Usuario usuario = (Usuario) session.getAttribute("usuarioLogado");
+        if (usuario != null && usuario.getRole()) { // true = admin
             return "admin";
         }
         return "redirect:/login";
