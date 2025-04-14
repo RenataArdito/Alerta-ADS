@@ -14,19 +14,22 @@
       <div><a href="/cadastro">Cadastro</a></div>
       <div><a href="/admin">Admin</a></div>
     </div>
-    <div class="logo">logo</div>
-    <div class="user-icon"><a href="/logout">Sair</a></div>
+    <div class="logo"><img src="/icons/logo.png" alt="Logo" /></div>
+    <div class="user-icon"><a href="/login"><img src="/icons/card_login.png" alt="card_login" /></a></div>
   </header>
 
   <h2>Meu Perfil</h2>
 
-  <div class="perfil-container">
-    <p><strong>Nome:</strong> <span th:text="${usuario.nome}">Nome</span></p>
-    <p><strong>E-mail:</strong> <span th:text="${usuario.email}">Email</span></p>
-    <p><strong>Endereço:</strong> <span th:text="${usuario.endereco}">Endereço</span></p>
-    <p><strong>Data de Nascimento:</strong> <span th:text="${#dates.format(usuario.nascimento, 'dd/MM/yyyy')}">Data</span></p>
-    <p><strong>Senha:</strong> <span th:text="${usuario.senha}">Senha</span></p>
-    <a href="/logout" class="btn-logout">Sair</a>
+  <div class="form-container">
+    <div class="perfil-icon"><img src="/icons/perfil.png" alt="Perfil" /></div>
+    <form>
+        <p><strong>Nome:</strong> <span th:text="${usuario.nome}">Nome</span></p>
+        <p><strong>E-mail:</strong> <span th:text="${usuario.email}">Email</span></p>
+        <p><strong>Endereço:</strong> <span th:text="${usuario.endereco}">Endereço</span></p>
+        <p><strong>Data de Nascimento:</strong> <span th:text="${#dates.format(usuario.nascimento, 'dd/MM/yyyy')}">Data</span></p>
+        <p><strong>Senha:</strong> <span th:text="${usuario.senha}">Senha</span></p>
+        <a href="/logout" class="btn-logout">Sair</a>
+    </form>
   </div>
 </body>
 </html>

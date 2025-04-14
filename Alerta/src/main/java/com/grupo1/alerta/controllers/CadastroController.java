@@ -24,7 +24,7 @@ public class CadastroController {
 
     @PostMapping("/cadastro")
     public String cadastrarUsuario(@ModelAttribute Usuario usuario, HttpSession session) {
-        usuario.setRole(false); // Novo usuário padrão (não admin)
+        usuario.setRole(false); // Novo usuário (não admin)
         usuarioService.cadastrarUsuario(usuario);
         session.setAttribute("usuarioLogado", usuario);
         return "redirect:/home";
