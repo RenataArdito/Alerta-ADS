@@ -277,8 +277,8 @@ button:hover {
 }
 
 .card-solicitacao img {
-    width: 80px;
-    height: 60px;
+    width: 200px;
+    height: 150px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
