@@ -235,3 +235,66 @@ button:hover {
         width: 90%;
     }
   }  
+
+.solicitacao {
+    background-color: #000;
+    padding: 40px 20px;
+    border-radius: 12px;
+    width: 90%; 
+    max-width: 1300px; 
+    margin: 40px auto;
+    text-align: center;
+}
+
+.solicitacao h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card-solicitacao {
+    background-color: #111;
+    border-radius: 12px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.card-solicitacao:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+}
+
+.card-solicitacao img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-solicitacao p {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.exemplo {
+    margin-top: 30px;
+    font-style: italic;
+    color: #ccc;
+    font-size: 15px;
+    text-align: center;
+}

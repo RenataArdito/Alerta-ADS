@@ -1,7 +1,9 @@
 package com.grupo1.alerta.controllers;
 
-import com.grupo1.alerta.models.Historico;
-import com.grupo1.alerta.services.HistoricoService;
+import com.grupo1.alerta.models.Solicitacao;
+import com.grupo1.alerta.models.Usuario;
+import com.grupo1.alerta.services.SolicitacaoService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,12 +15,18 @@ import java.util.List;
 public class HistoricoController {
 
     @Autowired
-    private HistoricoService historicoService;
+    private SolicitacaoService solicitacaoService;
 
-    @GetMapping("/Historico")
-    public String historico(Model model) {
-        List<Historico> historicos = historicoService.listarHistorico();
-        model.addAttribute("historicos", historicos);
-        return "Historico";
+    @GetMapping("/historico")
+    public String historico(Model model, HttpSession session) {
+        Usuario usuario = (Usuario) session.getAttribute("usuarioLogado");
+        if (usuario == null) return "redirect:/login";
+
+        List<Solicitacao> solicitacoes = usuario.getRole() ?
+            solicitacaoService.listarSolicitacoes() :
+            solicitacaoService.listarPorUsuario(usuario);
+
+        model.addAttribute("solicitacoes", solicitacoes);
+        return "historico";
     }
 }

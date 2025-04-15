@@ -19,3 +19,4 @@ public class UsuarioService {
         return usuarioRepository.findByEmailAndSenha(email, senha);
     }
 }
+

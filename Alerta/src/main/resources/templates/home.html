@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
@@ -14,28 +14,41 @@
         <div><a href="/cadastro">Cadastro</a></div>
         <div><a href="/admin">Admin</a></div>
     </div>
-    <div class="logo"><img src="/icons/logo.png" alt="Logo" /></div>
-    <div class="user-icon"><a href="/login"><img src="/icons/card_login.png" alt="card_login" /></a></div>
+    <div class="logo">
+        <img src="icons/logo.png" alt="Logo" />
+    </div>
+    <div class="user-icon">
+        <a href="/login"><img src="icons/card_login.png" alt="card_login" /></a>
+    </div>
 </header>
+
 <h2>HOME</h2>
+
 <div class="container">
+
     <div class="solicitacao">
-        <h2>Solicitação</h2>
-        <section>
-            <p>Buracos nas Ruas</p>
-            <p>Iluminação Pública</p>
-            <p>Outros</p>
-            <p>Descarte de Lixo</p>
-            <p>Vazamento de Água</p>
-        </section>
+        <h2>Escolha o tipo de solicitação</h2>
+        <div class="card-container">
+            <div class="card-solicitacao">
+                <img src="img/buraco.jpeg" alt="Buracos nas Ruas">
+                <p>Buracos nas Ruas</p>
+            </div>
+            <div class="card-solicitacao">
+                <img src="img/iluminacao.jpeg" alt="Iluminação Pública">
+                <p>Iluminação Pública</p>
+            </div>
+            <div class="card-solicitacao">
+                <img src="img/lixo.jpeg" alt="Descarte de Lixo">
+                <p>Descarte de Lixo</p>
+            </div>
+            <div class="card-solicitacao">
+                <img src="img/vazamento.jpeg" alt="Vazamento de Água">
+                <p>Vazamento de Água</p>
+            </div>
+        </div>
+        <p class="exemplo">Avise a prefeitura sobre algo que precise de manutenção</p>
     </div>
-    <div class="historico">
-        <h2>Histórico</h2>
-        <section>
-            <p>Solicitação 1 - 10/04/2025</p>
-            <p>Solicitação 2 - 09/04/2025</p>
-        </section>
-    </div>
+
 </div>
 </body>
 </html>
