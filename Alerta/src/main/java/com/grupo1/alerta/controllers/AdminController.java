@@ -1,19 +1,20 @@
 package com.grupo1.alerta.controllers;
 
+import com.grupo1.alerta.models.Historico;
 import com.grupo1.alerta.models.Processo;
 import com.grupo1.alerta.models.Solicitacao;
-import com.grupo1.alerta.models.Historico;
 import com.grupo1.alerta.models.Usuario;
-import com.grupo1.alerta.services.SolicitacaoService;
-import com.grupo1.alerta.services.ProcessoService;
 import com.grupo1.alerta.services.HistoricoService;
+import com.grupo1.alerta.services.ProcessoService;
+import com.grupo1.alerta.services.SolicitacaoService;
 import jakarta.servlet.http.HttpSession;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class AdminController {
@@ -33,6 +34,7 @@ public class AdminController {
         if (usuario != null && usuario.getRole()) {
             List<Solicitacao> solicitacoes = solicitacaoService.listarSolicitacoes();
             model.addAttribute("solicitacoes", solicitacoes);
+            model.addAttribute("usuarioLogado", usuario);
             return "admin";
         }
         return "redirect:/login";
@@ -56,8 +58,19 @@ public class AdminController {
             processo.setSolicitacao(s);
             processoService.salvarProcesso(processo);
             
-            // Cria o registro no histórico com todas as informações mescladas
-            Historico historico = new Historico(s, status, detalhes, usuario);
+            // Vincula o processo à solicitação e salva a alteração
+            s.setProcesso(processo);
+            solicitacaoService.salvarSolicitacao(s);
+            
+            // Verifica se já existe um histórico para essa solicitação
+            Historico historico = historicoService.buscarPorSolicitacao(s);
+            if (historico == null) {
+                historico = new Historico(s, status, detalhes, usuario);
+            } else {
+                historico.setStatus(status);
+                historico.setDetalhes(detalhes);
+                historico.setAdmin(usuario);
+            }
             historicoService.salvarHistorico(historico);
         }
         return "redirect:/historico";

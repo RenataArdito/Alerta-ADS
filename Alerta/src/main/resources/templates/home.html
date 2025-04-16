@@ -12,7 +12,7 @@
         <div><a href="/solicitacao">Solicitação</a></div>
         <div><a href="/historico">Histórico</a></div>
         <div><a href="/perfil">Perfil</a></div>
-        <div th:if="${usuarioLogado != null and usuarioLogado.role}">
+        <div th:if="${session.usuarioLogado != null and session.usuarioLogado.role}">
             <a href="/admin">Admin</a>
         </div>
     </div>
@@ -27,7 +27,6 @@
 <h2>HOME</h2>
 
 <div class="form-container">
-
     <div class="solicitacao">
         <h4>Escolha o tipo de solicitação</h4>
         <div class="card_container">
@@ -50,7 +49,6 @@
         </div>
         <p class="exemplo">Avise a prefeitura sobre algo que precise de manutenção</p>
     </div>
-
 </div>
 </body>
 </html>

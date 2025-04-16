@@ -15,14 +15,14 @@ public class Solicitacao {
     private String endereco;
     private String descricao;
 
+    @Column(name = "data_criacao", nullable = false)
     private LocalDateTime dataCriacao = LocalDateTime.now();
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_id")
+    @JoinColumn(name = "id_usuario")  // corresponde ao seu DDL
     private Usuario usuario;
     
-    // acessar o processamento (se houver)
-    @OneToOne(mappedBy = "solicitacao")
+    @OneToOne(mappedBy = "solicitacao", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Processo processo;
 
     public Solicitacao() {}
@@ -77,5 +77,8 @@ public class Solicitacao {
     }
     public void setProcesso(Processo processo) {
         this.processo = processo;
+        if (processo != null) {
+            processo.setSolicitacao(this);
+        }
     }
 }

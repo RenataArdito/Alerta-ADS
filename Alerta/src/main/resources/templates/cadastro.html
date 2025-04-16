@@ -11,7 +11,7 @@
         <div><a href="/home">Home</a></div>
         <div><a href="/solicitacao">Solicitação</a></div>
         <div><a href="/historico">Histórico</a></div>
-        <div th:if="${usuarioLogado != null and usuarioLogado.role}">
+        <div th:if="${session.usuarioLogado != null and session.usuarioLogado.role}">
           <a href="/admin">Admin</a>
         </div>
     </div>
