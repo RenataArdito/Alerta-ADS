@@ -19,32 +19,24 @@
   <description>Projeto Alerta - Gerenciamento de Solicitações</description>
 
   <properties>
-    <!-- agora usando Java 11 -->
-    <java.version>11</java.version>
-    <!-- garante que o maven-compiler-plugin pegue essa versão -->
+    <!-- Agora Java 17 -->
+    <java.version>17</java.version>
     <maven.compiler.release>${java.version}</maven.compiler.release>
   </properties>
 
   <dependencies>
-    <!-- Spring Boot Core -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
     </dependency>
-
-    <!-- Web / MVC -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-
-    <!-- Thymeleaf Template Engine -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-thymeleaf</artifactId>
     </dependency>
-
-    <!-- JPA + H2 Database -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -54,19 +46,15 @@
       <artifactId>h2</artifactId>
       <scope>runtime</scope>
     </dependency>
-
-    <!-- Testes -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <!-- PostgreSQL Runtime -->
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
       <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
@@ -77,8 +65,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
-
-      <!-- Força o compilador a usar release 11 -->
+      <!-- Compilador configurado para Java 17 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
