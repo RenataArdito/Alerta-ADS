@@ -11,6 +11,7 @@
         <div><a href="/home">Home</a></div>
         <div><a href="/solicitacao">Solicitação</a></div>
         <div><a href="/historico">Histórico</a></div>
+        <div><a href="/perfil">Perfil</a></div>
     </div>
     <div class="logo">
       <img src="/icons/logo.png" alt="Logo" />
@@ -32,7 +33,12 @@
                 th:value="${s.id}" 
                 th:text="'ID: ' + ${s.id} + ' - ' + ${s.descricao}"></option>
       </select>
-      <input type="text" name="status" placeholder="Status" required>
+      <select name="status" required>
+        <option value="EM AVALIAÇÃO" disabled selected>EM AVALIAÇÃO</option>
+        <option value="NEGADO">NEGADO</option>
+        <option value="EM ANDAMENTO">EM ANDAMENTO</option>
+        <option value="FINALIZADO">FINALIZADO</option>
+      </select>
       <textarea name="detalhes" placeholder="Detalhes"></textarea>
       <button type="submit">Atualizar</button>
     </form>

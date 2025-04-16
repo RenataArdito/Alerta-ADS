@@ -8,10 +8,13 @@
 <body>
   <header>
     <div class="header-links">
-      <div><a href="/home">Home</a></div>
-      <div><a href="/historico">Histórico</a></div>
-      <div><a href="/admin">Admin</a></div>
-    </div>
+        <div><a href="/home">Home</a></div>
+        <div><a href="/historico">Solicitação</a></div>
+        <div><a href="/perfil">Perfil</a></div>
+        <div th:if="${usuarioLogado != null and usuarioLogado.role}">
+            <a href="/admin">Admin</a>
+        </div>
+      </div>
     <div class="logo"><img src="/icons/logo.png" alt="Logo" /></div>
     <div class="user-icon"><a href="/login"><img src="/icons/card_login.png" alt="card_login" /></a></div>
   </header>
@@ -21,10 +24,10 @@
     <form action="/solicitacao" method="post">
       <select name="categoria" required>
         <option value="" disabled selected>Categoria</option>
-        <option value="Buracos">Buracos nas Ruas</option>
-        <option value="Iluminacao">Iluminação Pública Defeituosa</option>
-        <option value="Descarte">Descarte Irregular de Lixo</option>
-        <option value="Vazamento">Vazamento de Água</option>
+        <option value="Buracos nas Ruas">Buracos nas Ruas</option>
+        <option value="Iluminacao Pública Defeituosa">Iluminação Pública Defeituosa</option>
+        <option value="Descarte Irregular de Lixo">Descarte Irregular de Lixo</option>
+        <option value="Vazamento de Água">Vazamento de Água</option>
         <option value="Outro">Outro</option>
       </select>
       <input type="text" name="endereco" placeholder="Endereço" required>

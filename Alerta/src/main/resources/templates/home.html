@@ -11,8 +11,10 @@
     <div class="header-links">
         <div><a href="/solicitacao">Solicitação</a></div>
         <div><a href="/historico">Histórico</a></div>
-        <div><a href="/cadastro">Cadastro</a></div>
-        <div><a href="/admin">Admin</a></div>
+        <div><a href="/perfil">Perfil</a></div>
+        <div th:if="${usuarioLogado != null and usuarioLogado.role}">
+            <a href="/admin">Admin</a>
+        </div>
     </div>
     <div class="logo">
         <img src="icons/logo.png" alt="Logo" />

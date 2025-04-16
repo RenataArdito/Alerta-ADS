@@ -4,16 +4,6 @@
   <meta charset="UTF-8">
   <title>LOGIN</title>
   <link rel="stylesheet" href="/style.css">
-  <script>
-    window.onload = function () {
-      const params = new URLSearchParams(window.location.search);
-      if (params.get("erro") === "true") {
-        if (confirm("Usuário ou senha incorretos. Deseja se cadastrar?")) {
-          window.location.href = "/cadastro";
-        }
-      }
-    };
-  </script>
 </head>
 <body>
   <header>
@@ -21,7 +11,9 @@
         <div><a href="/home">Home</a></div>
         <div><a href="/solicitacao">Solicitação</a></div>
         <div><a href="/historico">Histórico</a></div>
-        <div><a href="/admin">Admin</a></div>
+        <div th:if="${usuarioLogado != null and usuarioLogado.role}">
+          <a href="/admin">Admin</a>
+        </div>
     </div>
     <div class="logo"><img src="/icons/logo.png" alt="Logo" /></div>
     <div class="user-icon"><a href="/cadastro"><img src="/icons/card_login.png" alt="card_login" /></a></div>

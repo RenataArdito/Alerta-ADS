@@ -10,7 +10,7 @@
     <div class="header-links">
       <div><a href="/home">Home</a></div>
       <div><a href="/solicitacao">Solicitação</a></div>
-      <!-- Exibe o menu Admin somente se o usuário logado for administrador -->
+      <div><a href="/perfil">Perfil</a></div>
       <div th:if="${usuarioLogado != null and usuarioLogado.role}">
         <a href="/admin">Admin</a>
       </div>
@@ -29,7 +29,7 @@
     <div th:if="${#lists.isEmpty(historicos)}">
       <p>Nenhuma solicitação encontrada.</p>
     </div>
-    <div th:each="h : ${historicos}" class="card">
+    <!--<div th:each="h : ${historicos}" class="card">
       <h3>Dados da Solicitação</h3>
       <p><strong>ID:</strong> <span th:text="${h.solicitacao.id}">1</span></p>
       <p><strong>Categoria:</strong> <span th:text="${h.solicitacao.categoria}">Categoria</span></p>
@@ -40,15 +40,15 @@
               th:text="${#dates.format(h.solicitacao.dataCriacao, 'dd/MM/yyyy HH:mm')}"></span>
         <span th:unless="${h.solicitacao.dataCriacao != null}">Data não disponível</span>
       </p>
-      <!-- Se desejar, é possível adicionar dados do usuário que criou a solicitação -->
-      <p><strong>Criado por:</strong> <span th:text="${h.solicitacao.usuario.nome}">Nome do Usuário</span></p>
+       Se desejar, é possível adicionar dados do usuário que criou a solicitação -->
+      <!--<p><strong>Criado por:</strong> <span th:text="${h.solicitacao.usuario.nome}">Nome do Usuário</span></p>
       
       <h3>Dados do Processo</h3>
       <p><strong>Status:</strong> <span th:text="${h.status}">Status</span></p>
       <p><strong>Detalhes:</strong> <span th:text="${h.detalhes}">Detalhes</span></p>
       <p><strong>Admin Responsável:</strong> <span th:text="${h.admin.nome}">Nome do Admin</span></p>
       <p><strong>Email do Admin:</strong> <span th:text="${h.admin.email}">Email</span></p>
-    </div>
+    </div>-->
   </div>
 </body> 
 </html>

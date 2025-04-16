@@ -60,6 +60,6 @@ public class AdminController {
             Historico historico = new Historico(s, status, detalhes, usuario);
             historicoService.salvarHistorico(historico);
         }
-        return "redirect:/admin";
+        return "redirect:/historico";
     }
 }
