@@ -3,46 +3,30 @@ package com.grupo1.alerta.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "historico")
-public class Historico {
-    
+@Table(name = "processos")
+public class Processo {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Referência à solicitação original
-    @OneToOne
-    @JoinColumn(name = "id_solicitacao", unique = true)
-    private Solicitacao solicitacao;
-
-    // Dados preenchidos pelo admin
-    private String status;
+    private String status;       // Exemplo: "EM AVALIAÇÃO", "FINALIZADO", "NEGADO"
     private String detalhes;
 
     @ManyToOne
     @JoinColumn(name = "id_admin")
-    private Usuario admin;
+    private Usuario admin; // Administrador que respondeu
 
-    public Historico() {}
+    @OneToOne
+    @JoinColumn(name = "id_solicitacao", unique = true)
+    private Solicitacao solicitacao;
 
-    public Historico(Solicitacao solicitacao, String status, String detalhes, Usuario admin) {
-        this.solicitacao = solicitacao;
-        this.status = status;
-        this.detalhes = detalhes;
-        this.admin = admin;
-    }
+    public Processo() {}
 
     // Getters e setters
 
     public Long getId() {
         return id;
-    }
-
-    public Solicitacao getSolicitacao() {
-        return solicitacao;
-    }
-    public void setSolicitacao(Solicitacao solicitacao) {
-        this.solicitacao = solicitacao;
     }
 
     public String getStatus() {
@@ -64,5 +48,12 @@ public class Historico {
     }
     public void setAdmin(Usuario admin) {
         this.admin = admin;
+    }
+
+    public Solicitacao getSolicitacao() {
+        return solicitacao;
+    }
+    public void setSolicitacao(Solicitacao solicitacao) {
+        this.solicitacao = solicitacao;
     }
 }

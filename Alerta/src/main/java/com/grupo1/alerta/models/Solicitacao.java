@@ -15,14 +15,15 @@ public class Solicitacao {
     private String endereco;
     private String descricao;
 
-    private String status = "Em validação";
-    private String detalhes;
-
     private LocalDateTime dataCriacao = LocalDateTime.now();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
+    
+    // acessar o processamento (se houver)
+    @OneToOne(mappedBy = "solicitacao")
+    private Processo processo;
 
     public Solicitacao() {}
 
@@ -33,6 +34,8 @@ public class Solicitacao {
         this.usuario = usuario;
     }
 
+    // Getters e setters
+
     public Long getId() {
         return id;
     }
@@ -40,7 +43,6 @@ public class Solicitacao {
     public String getCategoria() {
         return categoria;
     }
-
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
@@ -48,7 +50,6 @@ public class Solicitacao {
     public String getEndereco() {
         return endereco;
     }
-
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
@@ -56,25 +57,8 @@ public class Solicitacao {
     public String getDescricao() {
         return descricao;
     }
-
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getDetalhes() {
-        return detalhes;
-    }
-
-    public void setDetalhes(String detalhes) {
-        this.detalhes = detalhes;
     }
 
     public LocalDateTime getDataCriacao() {
@@ -84,8 +68,14 @@ public class Solicitacao {
     public Usuario getUsuario() {
         return usuario;
     }
-
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    public Processo getProcesso() {
+        return processo;
+    }
+    public void setProcesso(Processo processo) {
+        this.processo = processo;
     }
 }

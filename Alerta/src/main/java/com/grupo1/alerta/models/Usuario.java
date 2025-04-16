@@ -17,6 +17,7 @@ public class Usuario {
     private String email;
     private String endereco;
 
+
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date nascimento;

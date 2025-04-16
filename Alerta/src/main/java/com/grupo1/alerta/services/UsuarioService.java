@@ -15,8 +15,11 @@ public class UsuarioService {
         usuarioRepository.save(usuario);
     }
 
+    public void atualizarUsuario(Usuario usuario) {
+        usuarioRepository.save(usuario);
+    }
+
     public Usuario autenticar(String email, String senha) {
         return usuarioRepository.findByEmailAndSenha(email, senha);
     }
 }
-

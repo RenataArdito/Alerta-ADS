@@ -2,24 +2,53 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>HISTÓRICO</title>
+  <title>Histórico</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <header>
     <div class="header-links">
-        <div><a href="/home">Home</a></div>
-        <div><a href="/solicitacao">Solicitação</a></div>
-        <div><a href="/admin">Admin</a></div>
+      <div><a href="/home">Home</a></div>
+      <div><a href="/solicitacao">Solicitação</a></div>
+      <!-- Exibe o menu Admin somente se o usuário logado for administrador -->
+      <div th:if="${usuarioLogado != null and usuarioLogado.role}">
+        <a href="/admin">Admin</a>
+      </div>
     </div>
-    <div class="logo"><img src="/icons/logo.png" alt="Logo" /></div>
-    <div class="user-icon"><a href="/login"><img src="/icons/card_login.png" alt="card_login" /></a></div>
+    <div class="logo">
+      <img src="/icons/logo.png" alt="Logo" />
+    </div>
+    <div class="user-icon">
+      <a href="/login"><img src="/icons/card_login.png" alt="card_login" /></a>
+    </div>
   </header>
 
-  <h2>HISTÓRICO</h2>
+  <h2>Histórico de Solicitações</h2>
 
   <div class="container">
-    <!-- Cards de histórico aqui futuramente -->
+    <div th:if="${#lists.isEmpty(historicos)}">
+      <p>Nenhuma solicitação encontrada.</p>
+    </div>
+    <div th:each="h : ${historicos}" class="card">
+      <h3>Dados da Solicitação</h3>
+      <p><strong>ID:</strong> <span th:text="${h.solicitacao.id}">1</span></p>
+      <p><strong>Categoria:</strong> <span th:text="${h.solicitacao.categoria}">Categoria</span></p>
+      <p><strong>Endereço:</strong> <span th:text="${h.solicitacao.endereco}">Endereço</span></p>
+      <p><strong>Descrição:</strong> <span th:text="${h.solicitacao.descricao}">Descrição</span></p>
+      <p><strong>Data de Criação:</strong> 
+        <span th:if="${h.solicitacao.dataCriacao != null}" 
+              th:text="${#dates.format(h.solicitacao.dataCriacao, 'dd/MM/yyyy HH:mm')}"></span>
+        <span th:unless="${h.solicitacao.dataCriacao != null}">Data não disponível</span>
+      </p>
+      <!-- Se desejar, é possível adicionar dados do usuário que criou a solicitação -->
+      <p><strong>Criado por:</strong> <span th:text="${h.solicitacao.usuario.nome}">Nome do Usuário</span></p>
+      
+      <h3>Dados do Processo</h3>
+      <p><strong>Status:</strong> <span th:text="${h.status}">Status</span></p>
+      <p><strong>Detalhes:</strong> <span th:text="${h.detalhes}">Detalhes</span></p>
+      <p><strong>Admin Responsável:</strong> <span th:text="${h.admin.nome}">Nome do Admin</span></p>
+      <p><strong>Email do Admin:</strong> <span th:text="${h.admin.email}">Email</span></p>
+    </div>
   </div>
-</body>
+</body> 
 </html>

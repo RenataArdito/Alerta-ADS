@@ -12,16 +12,25 @@
         <div><a href="/solicitacao">Solicitação</a></div>
         <div><a href="/historico">Histórico</a></div>
     </div>
-    <div class="logo"><img src="/icons/logo.png" alt="Logo" /></div>
-    <div class="user-icon"><a href="/login"><img src="/icons/card_login.png" alt="card_login" /></a></div>
+    <div class="logo">
+      <img src="/icons/logo.png" alt="Logo" />
+    </div>
+    <div class="user-icon">
+      <a href="/login"><img src="/icons/card_login.png" alt="card_login" /></a>
+    </div>
   </header>
 
   <h2>ATUALIZAÇÃO DE PROCESSOS</h2>
 
   <div class="form-container">
     <form action="/admin/update" method="post">
-      <select name="solicitacao">
-        <option value="">Escolha a Solicitação</option>
+      <label for="solicitacaoId">Escolha a Solicitação</label>
+      <select name="solicitacaoId" id="solicitacaoId" required>
+        <option value="" disabled selected>Selecione a solicitação</option>
+        <!-- Itera sobre a lista de solicitações -->
+        <option th:each="s : ${solicitacoes}" 
+                th:value="${s.id}" 
+                th:text="'ID: ' + ${s.id} + ' - ' + ${s.descricao}"></option>
       </select>
       <input type="text" name="status" placeholder="Status" required>
       <textarea name="detalhes" placeholder="Detalhes"></textarea>

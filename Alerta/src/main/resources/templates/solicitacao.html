@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLICITAÇÃO</title>
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <title>Solicitação</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header>
-        <div class="header-links">
-            <div><a href="/home">Home</a></div>
-            <div><a href="/historico">Histórico</a></div>
-            <div><a href="/admin">Admin</a></div>
-        </div>
-        <div class="logo"><img src="/icons/logo.png" alt="Logo" /></div>
-        <div class="user-icon"><a href="/login"><img src="/icons/card_login.png" alt="card_login" /></a></div>
-    </header>
-
-    <h2>SOLICITAÇÃO</h2>
-    <div class="form-container">
-        <form id="solicitacao-form">
-            <select id="categoria" name="categoria" required>
-                <option value="" selected disabled>Categoria</option>
-                <option value="buracos">Buracos nas Ruas</option>
-                <option value="iluminacao">Iluminação Pública Defeituosa</option>
-                <option value="descarte">Descarte Irregular de Lixo</option>
-                <option value="vazamento">Vazamento de Água</option>
-                <option value="Outro">Outro</option>
-            </select>
-
-            <input type="text" id="endereco" name="endereco" placeholder="Endereço" required>
-            <textarea id="descricao" name="descricao" placeholder="Descrição" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+  <header>
+    <div class="header-links">
+      <div><a href="/home">Home</a></div>
+      <div><a href="/historico">Histórico</a></div>
+      <div><a href="/admin">Admin</a></div>
     </div>
+    <div class="logo"><img src="/icons/logo.png" alt="Logo" /></div>
+    <div class="user-icon"><a href="/login"><img src="/icons/card_login.png" alt="card_login" /></a></div>
+  </header>
+
+  <h2>SOLICITAÇÃO</h2>
+  <div class="form-container">
+    <form action="/solicitacao" method="post">
+      <select name="categoria" required>
+        <option value="" disabled selected>Categoria</option>
+        <option value="Buracos">Buracos nas Ruas</option>
+        <option value="Iluminacao">Iluminação Pública Defeituosa</option>
+        <option value="Descarte">Descarte Irregular de Lixo</option>
+        <option value="Vazamento">Vazamento de Água</option>
+        <option value="Outro">Outro</option>
+      </select>
+      <input type="text" name="endereco" placeholder="Endereço" required>
+      <textarea name="descricao" placeholder="Descrição" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 </body>
 </html>
